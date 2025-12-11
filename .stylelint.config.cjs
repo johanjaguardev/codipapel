@@ -1,22 +1,24 @@
+// stylelint.config.cjs
 module.exports = {
-  extends: ['stylelint-config-standard-scss'],
-  plugins: ['stylelint-order', 'stylelint-selector-bem-pattern'],
+  extends: ['stylelint-config-standard', 'stylelint-scss'],
+  plugins: ['stylelint-order'],
   rules: {
-    /* Orden alfabético de propiedades */
-    'order/properties-alphabetical-order': true,
-
-    /* BEM estricto */
-    'plugin/selector-bem-pattern': {
-      preset: 'bem',
-      componentName: '[A-Z]+', // Bloques en PascalCase o CamelCase
-      componentSelectors: {
-        initial: '^\\.{{componentName}}(?:__[-a-z]+)?(?:--[-a-z]+){0,2}$',
-      },
-      utilitySelectors: '^\\.u-[a-z]+$',
-    },
-
-    /* SCSS recomendado */
+    // SCSS
     'scss/at-rule-no-unknown': true,
-    'selector-class-pattern': '^[a-z0-9\\-]+$',
-  },
-};
+    'scss/dollar-variable-pattern': [
+      '^([a-z]+[a-z0-9-]*)(-[a-z0-9]+)*$',
+      { message: 'Variables must use kebab-case.' }
+    ],
+
+    // BEM naming
+    'selector-class-pattern': [
+      '^[a-z]+(?:-[a-z0-9]+)*(?:__(?:[a-z0-9]+(?:-[a-z0-9]+)*))?(?:--(?:[a-z0-9]+(?:-[a-z0-9]+)*))?$',
+      {
+        message: 'Use BEM (block__element--modifier). Example: card__title--big'
+      }
+    ],
+
+    // Propiedades ordenadas alfabéticamente
+    'order/properties-alphabetical-order': true
+  }
+}
