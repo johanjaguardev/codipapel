@@ -1,0 +1,86 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+@use 'sass:color';
+
+.floatingButton {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
+  @include box-shadow(3);
+  @include transition;
+
+  &:hover {
+    transform: scale(1.1);
+    @include box-shadow(4);
+  }
+
+  &__icon {
+    font-size: $font-size-2xl;
+    color: $color-text-inverse;
+  }
+
+  &__text {
+    display: none;
+
+    @media (min-width: $breakpoint-md) {
+      display: inline;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-semibold;
+      margin-left: $spacing-sm;
+    }
+  }
+
+  // WhatsApp Button
+  &:first-child {
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; // Color de WhatsApp
+
+    @media (max-width: $breakpoint-sm) {
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+    }
+
+    &:hover {
+      background-color: color.adjust(#25D366, $lightness: -10%);
+    }
+  }
+
+  // Quote Button
+  &Quote {
+    bottom: 110px;
+    right: 30px;
+    background-color: $color-primary;
+    color: $color-text-inverse;
+    padding: $spacing-md $spacing-lg;
+    border-radius: 30px;
+    flex-direction: row;
+
+    @media (max-width: $breakpoint-md) {
+      padding: $spacing-sm;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      bottom: 85px;
+      right: 20px;
+      width: 45px;
+      height: 45px;
+    }
+
+    &:hover {
+      background-color: $color-primary-dark;
+      transform: translateY(-5px);
+    }
+  }
+}

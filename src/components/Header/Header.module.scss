@@ -1,0 +1,161 @@
+@use '../../styles/variables';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: $color-background;
+  box-shadow: 0 2px 10px $color-shadow;
+
+  &__topbar {
+    background-color: $color-primary;
+    color: $color-text-inverse;
+    padding: $spacing-sm 0;
+  }
+
+  &__contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+
+    @media (max-width: $breakpoint-sm) {
+      flex-direction: column;
+      gap: $spacing-xs;
+      text-align: center;
+    }
+  }
+
+  &__contactItem {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+
+  &__contactIcon {
+    font-size: $font-size-sm;
+  }
+
+  &__contactText {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+  }
+
+  &__nav {
+    padding: $spacing-md 0;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+  }
+
+  &__logoImage {
+    height: 60px;
+    width: auto;
+  }
+
+  &__menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: $font-size-2xl;
+    color: $color-primary;
+    cursor: pointer;
+    padding: $spacing-xs;
+    border-radius: $border-radius-sm;
+    @include transition();
+
+    &:hover {
+      background-color: $color-primary-lighter;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      display: block;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    gap: $spacing-xl;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: $breakpoint-lg) {
+      position: fixed;
+      top: 140px;
+      left: 0;
+      width: 100%;
+      background-color: $color-background;
+      flex-direction: column;
+      padding: $spacing-lg;
+      box-shadow: 0 10px 20px $color-shadow;
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      @include transition;
+
+      &Open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__menuItem {
+    @media (max-width: $breakpoint-lg) {
+      width: 100%;
+    }
+  }
+
+  &__menuLink {
+    color: $color-text;
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-base;
+    text-decoration: none;
+    padding: $spacing-sm 0;
+    position: relative;
+    @include transition;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: $color-primary;
+      @include transition(width);
+    }
+
+    &:hover {
+      color: $color-primary;
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      display: block;
+      padding: $spacing-md;
+      border-bottom: 1px solid $color-border;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__nav {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

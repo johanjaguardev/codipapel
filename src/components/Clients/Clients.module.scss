@@ -1,0 +1,41 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+
+.clients {
+  &__grid {
+    @include grid(3, $spacing-2xl);
+    align-items: center;
+
+    @media (max-width: $breakpoint-lg) {
+      @include grid(2, $spacing-xl);
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      @include grid(1, $spacing-lg);
+    }
+  }
+
+  &__client {
+    text-align: center;
+  }
+
+  &__logo {
+    width: 150px;
+    height: 80px;
+    object-fit: contain;
+    margin: 0 auto $spacing-md;
+    filter: grayscale(100%);
+    @include transition(filter);
+
+    &:hover {
+      filter: grayscale(0%);
+    }
+  }
+
+  &__name {
+    color: $color-text-light;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    margin-bottom: 0;
+  }
+}

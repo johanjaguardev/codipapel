@@ -1,0 +1,130 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+
+.materials {
+  &__grid {
+    @include grid(5, $spacing-lg);
+    margin-bottom: $spacing-3xl;
+
+    @media (max-width: $breakpoint-xl) {
+      @include grid(4, $spacing-md);
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      @include grid(3, $spacing-md);
+    }
+
+    @media (max-width: $breakpoint-md) {
+      @include grid(2, $spacing-md);
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      @include grid(2, $spacing-sm);
+    }
+  }
+
+  &__card {
+    background-color: $color-background;
+    padding: $spacing-lg;
+    border-radius: $border-radius-lg;
+    text-align: center;
+    @include box-shadow(2);
+    @include transition;
+
+    &:hover {
+      transform: translateY(-5px);
+      @include box-shadow(4);
+    }
+  }
+
+  &__cardIcon {
+    font-size: $font-size-3xl;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__cardTitle {
+    font-size: $font-size-base;
+    color: $color-text;
+    margin-bottom: 0;
+  }
+
+  &__fiveRs {
+    background: linear-gradient(
+      135deg,
+      rgba($color-primary, 0.1) 0%,
+      rgba($color-primary-light, 0.05) 100%
+    );
+    padding: $spacing-2xl;
+    border-radius: $border-radius-xl;
+    margin-top: $spacing-xl;
+  }
+
+  &__fiveRsTitle {
+    text-align: center;
+    font-size: $font-size-3xl;
+    margin-bottom: $spacing-sm;
+    
+    .highlight {
+      color: $color-primary;
+      font-size: $font-size-4xl;
+    }
+  }
+
+  &__fiveRsSubtitle {
+    text-align: center;
+    color: $color-text-light;
+    margin-bottom: $spacing-xl;
+    font-size: $font-size-lg;
+  }
+
+  &__fiveRsGrid {
+    @include grid(5, $spacing-lg);
+
+    @media (max-width: $breakpoint-lg) {
+      @include grid(3, $spacing-md);
+    }
+
+    @media (max-width: $breakpoint-md) {
+      @include grid(2, $spacing-md);
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      @include grid(1, $spacing-md);
+    }
+  }
+
+  &__fiveRCard {
+    background-color: $color-background;
+    padding: $spacing-xl $spacing-lg;
+    border-radius: $border-radius-lg;
+    text-align: center;
+    @include box-shadow(2);
+  }
+
+  &__fiveRLetter {
+    width: 50px;
+    height: 50px;
+    background-color: $color-primary;
+    color: $color-text-inverse;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    margin: 0 auto $spacing-md;
+  }
+
+  &__fiveRTitle {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-sm;
+    color: $color-text;
+  }
+
+  &__fiveRDescription {
+    color: $color-text-light;
+    font-size: $font-size-sm;
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+}

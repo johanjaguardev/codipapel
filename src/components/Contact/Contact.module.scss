@@ -1,0 +1,157 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+
+.contact {
+  background-color: $color-background-alt;
+
+  &__content {
+    @include grid(2, $spacing-3xl);
+
+    @media (max-width: $breakpoint-lg) {
+      @include grid(1, $spacing-2xl);
+    }
+  }
+
+  &__info {
+    @media (max-width: $breakpoint-lg) {
+      order: 2;
+    }
+  }
+
+  &__infoTitle {
+    font-size: $font-size-2xl;
+    margin-bottom: $spacing-xl;
+    color: $color-text;
+  }
+
+  &__infoItem {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-xl;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__infoIcon {
+    flex-shrink: 0;
+    font-size: $font-size-xl;
+    color: $color-primary;
+    margin-top: $spacing-xs;
+  }
+
+  &__infoText {
+    flex: 1;
+  }
+
+  &__infoLabel {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-xs;
+    color: $color-text;
+  }
+
+  &__infoValue {
+    color: $color-text-light;
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+
+  &__social {
+    margin-top: $spacing-2xl;
+  }
+
+  &__socialTitle {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-md;
+    color: $color-text;
+  }
+
+  &__socialIcons {
+    display: flex;
+    gap: $spacing-md;
+  }
+
+  &__socialLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: $color-primary;
+    color: $color-text-inverse;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: $font-size-lg;
+    @include transition;
+
+    &:hover {
+      background-color: $color-primary-dark;
+      transform: translateY(-3px);
+    }
+  }
+
+  &__form {
+    @media (max-width: $breakpoint-lg) {
+      order: 1;
+    }
+  }
+
+  &__formTitle {
+    font-size: $font-size-2xl;
+    margin-bottom: $spacing-xl;
+    color: $color-text;
+  }
+
+  &__formElement {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+
+  &__formRow {
+    @include grid(2, $spacing-lg);
+
+    @media (max-width: $breakpoint-sm) {
+      @include grid(1, $spacing-md);
+    }
+  }
+
+  &__formGroup {
+    width: 100%;
+  }
+
+  &__input,
+  &__select,
+  &__textarea {
+    width: 100%;
+    padding: $spacing-md;
+    border: 1px solid $color-border;
+    border-radius: $border-radius-md;
+    font-family: $font-family-primary;
+    font-size: $font-size-base;
+    color: $color-text;
+    background-color: $color-background;
+    @include transition(border-color);
+
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+    }
+  }
+
+  &__select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right $spacing-md center;
+    background-size: 16px;
+    padding-right: $spacing-2xl;
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+}

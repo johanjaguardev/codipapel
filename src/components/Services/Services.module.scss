@@ -1,0 +1,56 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+
+.services {
+  background-color: $color-background-alt;
+
+  &__grid {
+    @include grid(3, $spacing-xl);
+    margin-bottom: $spacing-2xl;
+
+    @media (max-width: $breakpoint-lg) {
+      @include grid(2, $spacing-lg);
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      @include grid(1, $spacing-lg);
+    }
+  }
+
+  &__card {
+    background-color: $color-background;
+    padding: $spacing-2xl;
+    border-radius: $border-radius-lg;
+    text-align: center;
+    @include box-shadow(2);
+    @include transition;
+
+    &:hover {
+      transform: translateY(-10px);
+      @include box-shadow(4);
+    }
+  }
+
+  &__cardIcon {
+    font-size: $font-size-4xl;
+    color: $color-primary;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__cardTitle {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-md;
+    color: $color-text;
+  }
+
+  &__cardDescription {
+    color: $color-text-light;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  &__cta {
+    text-align: center;
+    margin-top: $spacing-xl;
+  }
+}

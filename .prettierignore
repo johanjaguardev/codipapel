@@ -1,2 +1,6 @@
 dist/
 node_modules/
+src/styles/**/*.scss
+*.scss
+# Ignorar variables porque prettier las daña
+src/styles/_variables.scss

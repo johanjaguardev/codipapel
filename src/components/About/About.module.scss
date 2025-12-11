@@ -1,0 +1,92 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+
+.about {
+  &__content {
+    @include grid(2, $spacing-3xl);
+    align-items: center;
+
+    @media (max-width: $breakpoint-lg) {
+      @include grid(1, $spacing-xl);
+    }
+  }
+
+  &__text {
+    @media (max-width: $breakpoint-lg) {
+      order: 2;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-3xl;
+    margin-bottom: $spacing-lg;
+    color: $color-text;
+  }
+
+  &__description {
+    p {
+      margin-bottom: $spacing-md;
+      line-height: 1.8;
+      color: $color-text-light;
+    }
+  }
+
+  &__values {
+    margin-top: $spacing-xl;
+  }
+
+  &__value {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-xl;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__valueIcon {
+    flex-shrink: 0;
+    font-size: $font-size-3xl;
+    color: $color-primary;
+    margin-top: $spacing-xs;
+  }
+
+  &__valueContent {
+    flex: 1;
+  }
+
+  &__valueTitle {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-xs;
+    color: $color-text;
+  }
+
+  &__valueDescription {
+    color: $color-text-light;
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+
+  &__image {
+    position: relative;
+
+    @media (max-width: $breakpoint-lg) {
+      order: 1;
+    }
+  }
+
+  &__imageElement {
+    width: 100%;
+    border-radius: $border-radius-xl;
+    @include box-shadow(3);
+    
+    @include transition;
+
+    &:hover {
+      transform: translateY(-5px);
+      @include box-shadow(4);
+    }
+  }
+}
