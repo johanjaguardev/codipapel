@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Codipapel — Reciclaje y Destrucción de Archivo Confidencial en Bogotá</title>
+<meta name="description" content="Empresa colombiana con más de 30 años en reciclaje, recolección a domicilio y destrucción certificada de archivo confidencial en Bogotá. Cuidamos el medio ambiente y protegemos la información de su empresa.">
+<link rel="canonical" href="https://codipapel.com/">
+
+<!-- Open Graph / WhatsApp / Facebook -->
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Codipapel — Reciclaje y Destrucción de Archivo Confidencial en Bogotá">
+<meta property="og:description" content="Más de 30 años convirtiendo residuos en recursos: recolección a domicilio, reciclaje de materiales y destrucción certificada de archivo confidencial en Bogotá.">
+<meta property="og:image" content="https://codipapel.com/og-image.png">
+<meta property="og:url" content="https://codipapel.com/">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Codipapel">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Codipapel — Reciclaje y Destrucción de Archivo Confidencial en Bogotá">
+<meta name="twitter:description" content="Más de 30 años convirtiendo residuos en recursos en Bogotá. Recolección a domicilio, reciclaje y destrucción certificada de archivo confidencial.">
+<meta name="twitter:image" content="https://codipapel.com/og-image.png">
+
+<!-- Datos estructurados para Google (negocio local) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RecyclingCenter",
+  "name": "Codipapel",
+  "image": "https://codipapel.com/og-image.png",
+  "url": "https://codipapel.com/",
+  "telephone": ["+57 302 513 7383", "+57 310 346 6271"],
+  "email": "codipapel@yahoo.com.ar",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Cra. 34A #10-97",
+    "addressLocality": "Bogotá",
+    "addressCountry": "CO"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "07:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday"],
+      "opens": "07:00",
+      "closes": "13:00"
+    }
+  ],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 4.6152772,
+    "longitude": -74.0981211
+  },
+  "areaServed": "Bogotá, Colombia",
+  "description": "Empresa colombiana con más de 30 años en reciclaje, recolección a domicilio y destrucción certificada de archivo confidencial en Bogotá."
+}
+</script>
+<link rel="icon" type="image/png" href="img/logo-codipapel.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --kraft:#DBEEDC;
+    --kraft-dark:#5FA875;
+    --paper:#F4F8F5;
+    --ink:#152420;
+    --forest:#0E6E78;
+    --forest-deep:#0A4F58;
+    --rust:#E8871E;
+    --rust-soft:#F2A54A;
+    --globe-blue:#2E86C1;
+    --line:rgba(21,36,32,0.13);
+    --radius:2px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Zilla Slab', serif;
+    font-weight:700;
+    line-height:1.08;
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit; text-decoration:none;}
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    font-size:0.72rem;
+    font-weight:500;
+  }
+  .wrap{max-width:1120px; margin:0 auto; padding:0 28px;}
+
+  /* Paper texture background */
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(0,0,0,0.02) 0, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(0,0,0,0.02) 0, transparent 40%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  /* ===== HEADER ===== */
+  header{
+    position:sticky; top:0; z-index:150;
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+    transition:transform .3s ease;
+  }
+  header.header-hidden{
+    transform:translateY(-100%);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 28px;
+  }
+  .logo{
+    display:flex; align-items:center;
+  }
+  .logo-mark{
+    height:56px;
+    width:auto;
+    display:block;
+  }
+  .logo .dot{color:var(--rust);}
+  nav.links{display:flex; gap:32px; align-items:center;}
+  nav.links a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.75rem;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    color:var(--ink);
+    opacity:0.75;
+    transition:opacity .2s;
+  }
+  nav.links a:hover{opacity:1;}
+  .nav-phone{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.8rem;
+    font-weight:500;
+    border:1px solid var(--ink);
+    padding:9px 16px;
+    border-radius:var(--radius);
+    white-space:nowrap;
+  }
+  .burger{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:5px;
+    width:42px; height:42px;
+    border:1px solid var(--ink);
+    border-radius:var(--radius);
+    background:none;
+    cursor:pointer;
+    padding:0;
+    flex-shrink:0;
+  }
+  .burger span{
+    display:block;
+    width:18px; height:2px;
+    background:var(--ink);
+    transition:transform .25s ease, opacity .2s ease;
+  }
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .burger.open span:nth-child(2){opacity:0;}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  .mobile-nav{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:var(--paper);
+    z-index:100;
+    flex-direction:column;
+    padding:96px 28px 28px;
+    overflow-y:auto;
+  }
+  .mobile-nav.open{display:flex;}
+  .mobile-nav a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:1rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--ink);
+    padding:20px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .mobile-nav-phone{
+    margin-top:28px;
+    font-family:'Zilla Slab', serif !important;
+    font-size:1.4rem !important;
+    color:var(--forest-deep) !important;
+    text-transform:none !important;
+    border-bottom:none !important;
+    letter-spacing:normal !important;
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    padding:64px 0 56px;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:56px;
+    align-items:center;
+    position:relative; z-index:2;
+  }
+  .hero-photo{
+    position:relative;
+    border-radius:6px;
+    overflow:hidden;
+    aspect-ratio:4/5;
+    box-shadow:0 24px 60px -20px rgba(10,79,88,0.35);
+  }
+  .hero-photo img{
+    width:100%; height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .hero-photo::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(10,79,88,0) 45%, rgba(10,79,88,0.55) 100%);
+  }
+  .hero-brand-row{
+    display:grid;
+    grid-template-columns:170px 1fr;
+    gap:28px;
+    align-items:center;
+    margin-bottom:36px;
+  }
+  .hero-brand-row img{
+    width:100%;
+    height:auto;
+    display:block;
+  }
+  .hero-brand-row .eyebrow{
+    margin-bottom:10px;
+  }
+  .hero-brand-row .headline{
+    font-size:clamp(1.6rem, 2.6vw, 2.3rem);
+    max-width:24ch;
+  }
+  .hero-photo-badge{
+    position:absolute;
+    left:20px; bottom:20px;
+    z-index:2;
+    display:flex; align-items:center; gap:16px;
+    background:rgba(244,248,245,0.96);
+    padding:16px 20px;
+    border-radius:6px;
+  }
+  .hero-photo-badge img{
+    width:64px; height:64px; object-fit:contain; border-radius:0;
+  }
+  .hero-photo-badge span{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    color:var(--forest-deep);
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    line-height:1.45;
+  }
+  .hero-bottom{
+    padding-bottom:0;
+  }
+  .stamp{
+    position:absolute;
+    right:6%;
+    top:60px;
+    width:150px; height:150px;
+    filter:drop-shadow(0 8px 18px rgba(10,79,88,0.18));
+  }
+  .eyebrow{
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:22px;
+  }
+  .eyebrow .rule{width:36px; height:2px; background:var(--rust);}
+  .eyebrow span{color:var(--rust); font-weight:600;}
+  h1.headline{
+    font-size:clamp(2.4rem, 5.2vw, 4.1rem);
+    max-width:14ch;
+    color:var(--forest-deep);
+  }
+  h1.headline em{
+    font-style:normal;
+    color:var(--rust);
+  }
+  .hero-sub{
+    max-width:46ch;
+    margin-top:24px;
+    font-size:1.08rem;
+    color:rgba(36,34,32,0.78);
+  }
+  .hero-cta{
+    display:flex; gap:16px; margin-top:36px; flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:14px 26px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    font-weight:500;
+    border-radius:var(--radius);
+    transition:transform .15s ease, background .2s ease;
+  }
+  .btn-primary{
+    background:var(--forest-deep);
+    color:var(--paper);
+  }
+  .btn-primary:hover{transform:translateY(-2px); background:var(--rust);}
+  .btn-ghost{
+    border:1px solid var(--ink);
+    color:var(--ink);
+  }
+  .btn-ghost:hover{transform:translateY(-2px);}
+
+  .hero-stats{
+    display:flex; gap:48px; margin-top:64px; flex-wrap:wrap;
+    padding-top:28px; border-top:1px solid var(--line);
+  }
+  .hero-stats .stat b{
+    font-family:'Zilla Slab', serif;
+    font-size:2.2rem;
+    color:var(--forest-deep);
+    display:block;
+  }
+  .hero-stats .stat span{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    opacity:0.65;
+  }
+
+  /* ===== SHRED DIVIDER (signature element) ===== */
+  .shred{
+    position:relative;
+    height:46px;
+    width:100%;
+    overflow:hidden;
+  }
+  .shred svg{display:block; width:100%; height:100%;}
+
+  /* ===== SECTION COMMON ===== */
+  section{padding:80px 0; position:relative; z-index:1;}
+  .section-head{
+    max-width:56ch;
+    margin-bottom:52px;
+  }
+  .section-head .eyebrow span{color:var(--rust);}
+  .section-head h2{
+    font-size:clamp(1.9rem, 3.4vw, 2.6rem);
+    color:var(--forest-deep);
+    margin-top:14px;
+  }
+  .section-dark{
+    background:var(--forest-deep);
+    color:var(--paper);
+  }
+  .section-dark .section-head h2{color:var(--paper);}
+  .section-dark .eyebrow span{color:var(--kraft);}
+
+  /* ===== SERVICES GRID ===== */
+  .services{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .service{
+    background:var(--paper);
+    padding:34px 30px;
+    transition:background .25s ease;
+  }
+  .service:hover{background:#fff;}
+  .service .num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    color:var(--rust);
+    margin-bottom:18px;
+    display:block;
+  }
+  .service h3{
+    font-size:1.28rem;
+    color:var(--forest-deep);
+    margin-bottom:10px;
+  }
+  .service p{
+    font-size:0.94rem;
+    color:rgba(36,34,32,0.72);
+  }
+
+  /* ===== PROCESS ===== */
+  .process{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:36px;
+    margin-top:8px;
+  }
+  .process-step{
+    border-left:2px solid var(--kraft-dark);
+    padding-left:22px;
+  }
+  .process-step .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    color:var(--kraft);
+    opacity:0.8;
+  }
+  .process-step h3{
+    color:var(--paper);
+    font-size:1.2rem;
+    margin:10px 0 8px;
+  }
+  .process-step p{
+    color:rgba(242,237,225,0.7);
+    font-size:0.92rem;
+  }
+  .cert-note{
+    margin-top:48px;
+    padding:22px 26px;
+    border:1px dashed rgba(242,237,225,0.35);
+    display:flex; align-items:center; gap:16px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.82rem;
+    color:var(--kraft);
+    max-width:60ch;
+  }
+
+  /* ===== MATERIALS ===== */
+  .materials-grid{
+    display:grid;
+    grid-template-columns:1.2fr 0.8fr;
+    gap:48px;
+    align-items:center;
+  }
+  .materials-photo{
+    border-radius:6px;
+    overflow:hidden;
+    aspect-ratio:4/3;
+  }
+  .materials-photo img{
+    width:100%; height:100%; object-fit:cover; display:block;
+  }
+  .materials{
+    display:flex; flex-wrap:wrap; gap:12px;
+  }
+  .material-chip{
+    padding:12px 20px;
+    border:1px solid var(--ink);
+    border-radius:999px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.8rem;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    display:flex; align-items:center; gap:8px;
+  }
+  .material-chip .sw{
+    width:9px; height:9px; border-radius:50%;
+    background:var(--rust);
+  }
+
+  /* ===== ABOUT ===== */
+  .about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:64px;
+    align-items:start;
+  }
+  .about-grid p{
+    color:rgba(36,34,32,0.78);
+    margin-bottom:18px;
+    font-size:1.02rem;
+  }
+  .about-loc{
+    position:relative;
+    padding:32px;
+    border-radius:6px;
+    overflow:hidden;
+    isolation:isolate;
+    min-height:340px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+  }
+  .about-loc img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    z-index:-2;
+  }
+  .about-loc::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(10,79,88,0.15) 0%, rgba(10,79,88,0.92) 78%);
+    z-index:-1;
+  }
+  .about-loc .mono{color:var(--kraft); opacity:0.9;}
+  .about-loc h3{
+    color:#fff;
+    font-size:1.3rem;
+    margin:10px 0 16px;
+  }
+  .about-loc address{
+    font-style:normal;
+    color:rgba(255,255,255,0.88);
+    line-height:1.8;
+  }
+
+  /* ===== CONTACT ===== */
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:64px;
+  }
+  .contact-list{list-style:none;}
+  .contact-list li{
+    padding:22px 0;
+    border-bottom:1px solid var(--line);
+    display:flex; justify-content:space-between; align-items:baseline;
+    flex-wrap:wrap; gap:6px;
+  }
+  .contact-list .label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    opacity:0.6;
+  }
+  .contact-list .value{
+    font-family:'Zilla Slab', serif;
+    font-size:1.25rem;
+    color:#fff;
+  }
+  .contact-list a.value:hover{color:var(--rust-soft);}
+
+  .cta-card{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.14);
+    color:var(--paper);
+    padding:40px 34px;
+    border-radius:var(--radius);
+  }
+  .cta-card h3{font-size:1.5rem; margin-bottom:14px;}
+  .cta-card p{color:rgba(242,237,225,0.75); margin-bottom:26px; font-size:0.95rem;}
+  .cta-card .btn-primary{background:var(--rust); width:100%; justify-content:center;}
+  .cta-card .btn-primary:hover{background:var(--kraft); color:var(--forest-deep);}
+
+  /* ===== FOOTER ===== */
+  footer{
+    padding:40px 0;
+    border-top:1px solid var(--line);
+  }
+  footer .wrap{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+  }
+  footer .mono{opacity:0.55;}
+
+  /* ===== QUALITY REQUIREMENTS ===== */
+  .quality-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+    margin-top:32px;
+  }
+  .quality-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:24px 24px 26px;
+  }
+  .quality-card h4{
+    font-family:'Zilla Slab', serif;
+    font-size:1.05rem;
+    color:var(--forest-deep);
+    margin-bottom:10px;
+  }
+  .quality-card p{
+    font-size:0.9rem;
+    color:rgba(21,36,32,0.7);
+    line-height:1.6;
+  }
+  .quality-card ul{
+    margin-top:10px;
+    padding-left:18px;
+    font-size:0.9rem;
+    color:rgba(21,36,32,0.7);
+    line-height:1.7;
+  }
+  .quality-card-note{
+    background:var(--kraft);
+    border-color:transparent;
+  }
+  .quality-card-note h4{color:var(--forest-deep);}
+
+  /* ===== ALLIANCES ===== */
+  .alliances{
+    padding:52px 0;
+    border-top:1px solid var(--line);
+  }
+  .alliances .wrap{
+    display:flex; align-items:center; gap:32px; flex-wrap:wrap;
+  }
+  .alliances-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:rgba(21,36,32,0.55);
+    white-space:nowrap;
+  }
+  .alliances-list{
+    display:flex; flex-wrap:wrap; gap:14px;
+    flex:1;
+  }
+  .alliance-card{
+    display:flex; align-items:center; justify-content:center;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:6px;
+    height:58px;
+    padding:10px 20px;
+    transition:border-color .2s, transform .15s;
+  }
+  .alliance-card:hover{border-color:var(--forest-deep); transform:translateY(-2px);}
+  .alliance-card img{
+    max-height:32px;
+    max-width:130px;
+    object-fit:contain;
+    display:block;
+  }
+  .alliance-card svg{
+    max-height:32px;
+    max-width:130px;
+    width:auto;
+    height:32px;
+    display:block;
+  }
+  .alliance-card.text-mark{
+    font-family:'Zilla Slab', serif;
+    font-weight:700;
+    font-size:1.05rem;
+    color:var(--forest-deep);
+    letter-spacing:0.01em;
+  }
+  .greenseal-badge{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--kraft);
+    padding:9px 14px;
+    border-radius:999px;
+    margin-top:18px;
+  }
+  .greenseal-badge svg{width:16px; height:16px; flex-shrink:0;}
+  .greenseal-badge span{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    color:var(--forest-deep);
+  }
+
+  @media (max-width: 860px){
+    .quality-grid{grid-template-columns:1fr;}
+    .alliances .wrap{flex-direction:column; align-items:flex-start;}
+  }
+
+  .perry-intro{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:28px;
+    align-items:center;
+    margin-bottom:44px;
+    max-width:640px;
+  }
+  .perry-badge-img{
+    width:100%; height:auto;
+    display:block;
+  }
+  .perry-heading h2{
+    font-size:clamp(1.9rem, 3.4vw, 2.6rem);
+    color:var(--forest-deep);
+  }
+  .perry-heading p{
+    color:rgba(21,36,32,0.7);
+    font-size:1rem;
+    margin-top:6px;
+    max-width:56ch;
+  }
+  .perry-sub{
+    display:flex; align-items:baseline; justify-content:space-between;
+    margin:52px 0 24px;
+    flex-wrap:wrap; gap:10px;
+    border-bottom:1px solid var(--line);
+    padding-bottom:14px;
+  }
+  .perry-sub:first-of-type{margin-top:0;}
+  .perry-sub h3{
+    font-size:1.4rem;
+    color:var(--forest-deep);
+  }
+  .perry-sub span{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--rust);
+  }
+  .perry-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:24px;
+  }
+  .perry-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:6px;
+    overflow:hidden;
+    display:flex; flex-direction:column;
+  }
+  .perry-card-photo{
+    aspect-ratio:1/1;
+    background:#f7f5ee;
+    overflow:hidden;
+  }
+  .perry-card-photo img{
+    width:100%; height:100%; object-fit:cover; display:block;
+  }
+  .perry-card-body{
+    padding:20px 22px 24px;
+    display:flex; flex-direction:column; flex:1;
+  }
+  .perry-card-body h4{
+    font-family:'Zilla Slab', serif;
+    font-size:1.15rem;
+    color:var(--forest-deep);
+    margin-bottom:8px;
+  }
+  .perry-specs{
+    list-style:none;
+    font-size:0.86rem;
+    color:rgba(21,36,32,0.68);
+    line-height:1.7;
+    margin-bottom:14px;
+  }
+  .perry-price-row{
+    margin-top:auto;
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:14px;
+    border-top:1px solid var(--line);
+  }
+  .perry-price{
+    font-family:'Zilla Slab', serif;
+    font-size:1.3rem;
+    color:var(--forest-deep);
+  }
+  .perry-price.dummy{
+    color:var(--rust);
+    position:relative;
+  }
+  .perry-dummy-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    background:var(--rust);
+    color:#fff;
+    padding:3px 7px;
+    border-radius:3px;
+    margin-left:8px;
+    vertical-align:middle;
+  }
+  .perry-mini-btn{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--forest-deep);
+    border:1px solid var(--forest-deep);
+    padding:8px 14px;
+    border-radius:3px;
+    transition:background .2s, color .2s;
+  }
+  .perry-mini-btn:hover{background:var(--forest-deep); color:#fff;}
+  .perry-dummy-note{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.74rem;
+    color:var(--rust-soft);
+    background:#fff7ec;
+    border:1px dashed var(--rust-soft);
+    padding:14px 18px;
+    border-radius:4px;
+    margin-bottom:28px;
+    line-height:1.6;
+  }
+  .perry-cta{
+    margin-top:52px;
+    background:var(--forest-deep);
+    border-radius:6px;
+    padding:36px 34px;
+    display:flex; align-items:center; justify-content:space-between;
+    gap:24px; flex-wrap:wrap;
+  }
+  .perry-cta div h3{color:#fff; font-size:1.3rem; margin-bottom:6px;}
+  .perry-cta div p{color:rgba(242,237,225,0.75); font-size:0.92rem;}
+  .perry-cta .btn-primary{background:var(--rust); flex-shrink:0;}
+  .perry-cta .btn-primary:hover{background:var(--kraft); color:var(--forest-deep);}
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 860px){
+    .perry-grid{grid-template-columns:1fr;}
+    .perry-cta{flex-direction:column; align-items:flex-start;}
+  }
+
+  @media (max-width: 860px){
+    nav.links{display:none;}
+    .nav-phone{display:none;}
+    .burger{display:flex;}
+    .hero-grid{grid-template-columns:1fr; gap:36px;}
+    .hero-photo{aspect-ratio:16/10;}
+    .materials-grid{grid-template-columns:1fr; gap:28px;}
+    .materials-photo{aspect-ratio:16/9;}
+    .services{grid-template-columns:1fr;}
+    .process{grid-template-columns:1fr; gap:28px;}
+    .about-grid, .contact-grid{grid-template-columns:1fr; gap:36px;}
+    .cta-card{padding:30px 26px;}
+    .hero-stats{gap:32px;}
+    .hero-brand-row{grid-template-columns:100px 1fr; gap:14px;}
+    .hero-brand-row .headline{font-size:1.5rem; max-width:none;}
+    .perry-intro{grid-template-columns:110px 1fr; gap:18px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav wrap">
+    <a href="#" class="logo">
+      <img src="img/logo-codipapel.png" alt="Codipapel" class="logo-mark">
+    </a>
+    <nav class="links">
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Destrucción</a>
+      <a href="#perrylandia">Perrylandia</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="nav-phone" href="tel:+573025137383">(+57) 302 513 7383</a>
+    <button class="burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#servicios">Servicios</a>
+  <a href="#proceso">Destrucción</a>
+  <a href="#perrylandia">Perrylandia</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#contacto">Contacto</a>
+  <a class="mobile-nav-phone" href="tel:+573025137383">(+57) 302 513 7383</a>
+</div>
+
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-brand-row">
+            <img src="img/logo-codipapel.png" alt="Codipapel">
+            <div class="hero-brand-text">
+              <div class="eyebrow">
+                <div class="rule"></div>
+                <span class="mono">Reciclaje &amp; destrucción confidencial</span>
+              </div>
+              <h1 class="headline">Más de 30 años convirtiendo <em>residuos</em> en recursos.</h1>
+            </div>
+          </div>
+          <p class="hero-sub">Recolección, reciclaje y destrucción certificada de archivo confidencial a domicilio en Bogotá. Cuidamos el medio ambiente y protegemos la información de su empresa.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#contacto">Solicitar recolección</a>
+            <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><b>30+</b><span>Años de experiencia</span></div>
+            <div class="stat"><b>1000+</b><span>Toneladas recicladas</span></div>
+            <div class="stat"><b>100%</b><span>Destrucción certificada</span></div>
+          </div>
+          <div class="greenseal-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--forest-deep)" stroke-width="1.8" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Negocio Verde certificado — Secretaría Distrital de Ambiente</span>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="https://images.unsplash.com/photo-1749266002449-965994ab68b1?fm=jpg&amp;q=80&amp;w=1400&amp;auto=format&amp;fit=crop" alt="Vista aérea de bosque verde, símbolo del compromiso ambiental de Codipapel">
+          <div class="hero-photo-badge">
+            <img src="img/logo-codipapel.png" alt="Codipapel">
+            <span>Empresa colombiana<br>comprometida con<br>el medio ambiente</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHRED DIVIDER -->
+  <div class="shred" aria-hidden="true">
+    <svg viewBox="0 0 1200 46" preserveAspectRatio="none">
+      <rect x="0" y="0" width="1200" height="46" fill="#0A4F58"/>
+      <g fill="#F2EDE1">
+        <polygon points="0,0 26,0 14,46 0,46"/>
+        <polygon points="40,0 62,0 52,46 40,46"/>
+        <polygon points="78,0 96,0 88,46 78,46"/>
+        <polygon points="112,0 138,0 124,46 112,46"/>
+        <polygon points="152,0 172,0 164,46 152,46"/>
+        <polygon points="188,0 214,0 200,46 188,46"/>
+        <polygon points="228,0 248,0 240,46 228,46"/>
+        <polygon points="264,0 290,0 276,46 264,46"/>
+        <polygon points="304,0 324,0 316,46 304,46"/>
+        <polygon points="340,0 366,0 352,46 340,46"/>
+        <polygon points="380,0 400,0 392,46 380,46"/>
+        <polygon points="416,0 442,0 428,46 416,46"/>
+        <polygon points="456,0 476,0 468,46 456,46"/>
+        <polygon points="492,0 518,0 504,46 492,46"/>
+        <polygon points="532,0 552,0 544,46 532,46"/>
+        <polygon points="568,0 594,0 580,46 568,46"/>
+        <polygon points="608,0 628,0 620,46 608,46"/>
+        <polygon points="644,0 670,0 656,46 644,46"/>
+        <polygon points="684,0 704,0 696,46 684,46"/>
+        <polygon points="720,0 746,0 732,46 720,46"/>
+        <polygon points="760,0 780,0 772,46 760,46"/>
+        <polygon points="796,0 822,0 808,46 796,46"/>
+        <polygon points="836,0 856,0 848,46 836,46"/>
+        <polygon points="872,0 898,0 884,46 872,46"/>
+        <polygon points="912,0 932,0 924,46 912,46"/>
+        <polygon points="948,0 974,0 960,46 948,46"/>
+        <polygon points="988,0 1008,0 1000,46 988,46"/>
+        <polygon points="1024,0 1050,0 1036,46 1024,46"/>
+        <polygon points="1064,0 1084,0 1076,46 1064,46"/>
+        <polygon points="1100,0 1126,0 1112,46 1100,46"/>
+        <polygon points="1140,0 1160,0 1152,46 1140,46"/>
+        <polygon points="1176,0 1200,0 1188,46 1176,46"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><div class="rule"></div><span class="mono">Qué hacemos</span></div>
+        <h2>Servicios pensados para su empresa y el planeta.</h2>
+      </div>
+      <div class="services">
+        <div class="service">
+          <span class="num">01</span>
+          <h3>Destrucción de archivo confidencial</h3>
+          <p>Trituración manual, mecánica o industrial de documentos, publicidad, tarjetas y banners, con certificado de destrucción y protección de marca.</p>
+        </div>
+        <div class="service">
+          <span class="num">02</span>
+          <h3>Recolección a domicilio</h3>
+          <p>Recogemos su material reciclable directamente en sus instalaciones, sin costo adicional, para que usted no tenga que trasladarse.</p>
+        </div>
+        <div class="service">
+          <span class="num">03</span>
+          <h3>Reciclaje de materiales</h3>
+          <p>Procesamos papel, cartón, vidrio, plástico, metal y chatarra, dándoles una segunda vida útil.</p>
+        </div>
+        <div class="service">
+          <span class="num">04</span>
+          <h3>Consultoría ambiental</h3>
+          <p>Diseño e implementación de planes de gestión integral de residuos sólidos para empresas.</p>
+        </div>
+        <div class="service">
+          <span class="num">05</span>
+          <h3>Capacitaciones ambientales</h3>
+          <p>Formamos a equipos y comunidades en buenas prácticas de reciclaje y manejo de residuos.</p>
+        </div>
+        <div class="service">
+          <span class="num">06</span>
+          <h3>Compra de material reciclable</h3>
+          <p>Compramos su material reciclable a buen precio, con recolección incluida a domicilio.</p>
+        </div>
+      </div>
+      <div class="section-head" style="margin-top:64px;">
+        <div class="eyebrow"><div class="rule"></div><span class="mono">Recolección a domicilio</span></div>
+        <h2>Calidad y presentación de los materiales.</h2>
+        <p style="margin-top:14px; color:rgba(21,36,32,0.72); font-size:1rem; max-width:64ch;">Para que su material reciclable tenga su valor agregado al 100%, debe cumplir con estas características físicas antes de la recolección.</p>
+      </div>
+      <div class="quality-grid">
+        <div class="quality-card">
+          <h4>Cartón, archivo, periódico, revistas y plegadiza</h4>
+          <p>Al provenir de la pulpa de los árboles, deben recuperarse asegurándose que no se contaminen de:</p>
+          <ul>
+            <li>Agua</li>
+            <li>Aceite</li>
+            <li>Tierra</li>
+            <li>Productos químicos en general</li>
+          </ul>
+        </div>
+        <div class="quality-card">
+          <h4>Plástico: bolsas</h4>
+          <p>No deben contener ningún residuo ni humedad; deben mantenerse secas y limpias. Si fueron empaque de cárnicos, pescado o pollo, se deben lavar y secar para quitar malos olores.</p>
+        </div>
+        <div class="quality-card">
+          <h4>Botellas de PET</h4>
+          <p>Sirven para el reciclaje las de color transparente, verde y azul — las de color ámbar no son comercializables. Deben estar vacías, sin líquido y, en lo posible, aplastadas.</p>
+        </div>
+        <div class="quality-card">
+          <h4>Vidrio</h4>
+          <p>Debe separarse por colores: blanco, verde y ámbar. Las botellas deben estar destapadas y sin líquido en su interior.</p>
+        </div>
+        <div class="quality-card">
+          <h4>Chatarra</h4>
+          <p>El material debe estar libre de tierra, basura, madera, concreto, piedras y demás elementos contaminantes.</p>
+        </div>
+        <div class="quality-card quality-card-note">
+          <h4>Importante</h4>
+          <p>Todos los materiales deben estar separados por tipo y empacados para facilitar su pesaje, manejo y cargue.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO / DESTRUCCIÓN -->
+  <section id="proceso" class="section-dark">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><div class="rule"></div><span class="mono">Cómo trabajamos</span></div>
+        <h2>Su información, destruida con total garantía.</h2>
+      </div>
+      <div class="process">
+        <div class="process-step">
+          <span class="tag">Paso 01</span>
+          <h3>Recolección</h3>
+          <p>Programamos la recolección de su archivo confidencial en sus instalaciones, en presencia de un funcionario de su empresa.</p>
+        </div>
+        <div class="process-step">
+          <span class="tag">Paso 02</span>
+          <h3>Destrucción</h3>
+          <p>Desgarramos los documentos hasta un tamaño donde la información se vuelve irrecuperable, dejando registro fotográfico o en video.</p>
+        </div>
+        <div class="process-step">
+          <span class="tag">Paso 03</span>
+          <h3>Reciclaje y certificado</h3>
+          <p>El papel se compacta y se lleva a plantas como Protisa Colombia y Familia S.A. para su transformación. Usted recibe su Certificado de Destrucción Confidencial.</p>
+        </div>
+      </div>
+      <div class="cert-note">
+        Todo el proceso se realiza en presencia de un funcionario de su empresa, con soporte fotográfico o en video como respaldo.
+      </div>
+    </div>
+  </section>
+
+  <!-- MATERIALES -->
+  <section>
+    <div class="wrap">
+      <div class="materials-grid">
+        <div>
+          <div class="section-head" style="margin-bottom:28px;">
+            <div class="eyebrow"><div class="rule"></div><span class="mono">Materiales</span></div>
+            <h2>Lo que recuperamos y reciclamos.</h2>
+          </div>
+          <div class="materials">
+            <div class="material-chip"><span class="sw"></span>Papel</div>
+            <div class="material-chip"><span class="sw"></span>Cartón</div>
+            <div class="material-chip"><span class="sw"></span>Vidrio</div>
+            <div class="material-chip"><span class="sw"></span>Plástico</div>
+            <div class="material-chip"><span class="sw"></span>Metal</div>
+            <div class="material-chip"><span class="sw"></span>Chatarra</div>
+            <div class="material-chip"><span class="sw"></span>Periódico</div>
+            <div class="material-chip"><span class="sw"></span>Aluminio</div>
+          </div>
+        </div>
+        <div class="materials-photo">
+          <img src="https://images.unsplash.com/photo-1706468808971-ee72122572b6?fm=jpg&amp;q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="Botellas de vidrio listas para reciclaje">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERRYLANDIA STORE -->
+  <section id="perrylandia">
+    <div class="wrap">
+      <div class="perry-intro">
+        <div class="perry-badge">
+          <img src="img/perrylandia-logo.png" alt="Perrylandia" class="perry-badge-img">
+        </div>
+        <div class="perry-heading">
+          <div class="eyebrow"><div class="rule"></div><span class="mono">Tienda de reciclaje</span></div>
+          <h2>Perrylandia</h2>
+          <p>Productos hechos a partir de material recuperado: bolsos y maletas de banner publicitario reciclado, y accesorios de cobre reutilizado. Cada pieza le da una segunda vida a un material que iba para la basura.</p>
+        </div>
+      </div>
+
+      <div class="perry-sub">
+        <h3>Bolsos y maletas de banner reciclado</h3>
+        <span>Precios confirmados</span>
+      </div>
+      <div class="perry-grid">
+        <div class="perry-card">
+          <div class="perry-card-photo"><img src="img/productos/bolsa.jpg" alt="Bolsa multiusos — Perrylandia"></div>
+          <div class="perry-card-body">
+            <h4>Bolsa multiusos</h4>
+            <ul class="perry-specs"><li>40 × 40 × 13 cm</li><li>Capacidad 20 kg</li><li>Peso 280 g</li></ul>
+            <div class="perry-price-row">
+              <span class="perry-price">$15.000</span>
+              <a class="perry-mini-btn" href="https://wa.me/573103466271?text=Hola%2C%20me%20interesa%20el%20Bolsa%20multiusos%20de%20Perrylandia" target="_blank" rel="noopener">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div class="perry-card">
+          <div class="perry-card-photo"><img src="img/productos/morralito.jpg" alt="Morralito — Perrylandia"></div>
+          <div class="perry-card-body">
+            <h4>Morralito</h4>
+            <ul class="perry-specs"><li>37 × 27 × 10 cm</li><li>Bolsillo ext. + int.</li><li>Capacidad 10 kg · 340 g</li></ul>
+            <div class="perry-price-row">
+              <span class="perry-price">$30.000</span>
+              <a class="perry-mini-btn" href="https://wa.me/573103466271?text=Hola%2C%20me%20interesa%20el%20Morralito%20de%20Perrylandia" target="_blank" rel="noopener">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div class="perry-card">
+          <div class="perry-card-photo"><img src="img/productos/kanguro.jpg" alt="Eko-Kanguro — Perrylandia"></div>
+          <div class="perry-card-body">
+            <h4>Eko-Kanguro</h4>
+            <ul class="perry-specs"><li>14 × 23 × 12 cm</li><li>Correa 78 cm</li><li>Bolsillo ext. + int. · 180 g</li></ul>
+            <div class="perry-price-row">
+              <span class="perry-price">$30.000</span>
+              <a class="perry-mini-btn" href="https://wa.me/573103466271?text=Hola%2C%20me%20interesa%20el%20Eko-Kanguro%20de%20Perrylandia" target="_blank" rel="noopener">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div class="perry-card">
+          <div class="perry-card-photo"><img src="img/productos/billetera.jpg" alt="Eco-Billetera sport — Perrylandia"></div>
+          <div class="perry-card-body">
+            <h4>Eco-Billetera sport</h4>
+            <ul class="perry-specs"><li>26 × 13 cm</li><li>11 bolsillos, cierre velcro</li><li>100 g</li></ul>
+            <div class="perry-price-row">
+              <span class="perry-price">$25.000</span>
+              <a class="perry-mini-btn" href="https://wa.me/573103466271?text=Hola%2C%20me%20interesa%20el%20Eco-Billetera%20sport%20de%20Perrylandia" target="_blank" rel="noopener">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div class="perry-card">
+          <div class="perry-card-photo"><img src="img/productos/dama.jpg" alt="Eco-Dama — Perrylandia"></div>
+          <div class="perry-card-body">
+            <h4>Eco-Dama</h4>
+            <ul class="perry-specs"><li>11 × 19 cm, abertura 14 cm</li><li>12 bolsillos (1 ext. + 11 int.)</li><li>140 g</li></ul>
+            <div class="perry-price-row">
+              <span class="perry-price">$25.000</span>
+              <a class="perry-mini-btn" href="https://wa.me/573103466271?text=Hola%2C%20me%20interesa%20el%20Eco-Dama%20de%20Perrylandia" target="_blank" rel="noopener">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div class="perry-card">
+          <div class="perry-card-photo"><img src="img/productos/viajero.jpg" alt="Morral viajero — Perrylandia"></div>
+          <div class="perry-card-body">
+            <h4>Morral viajero</h4>
+            <ul class="perry-specs"><li>50 × 25 cm · 22 litros</li><li>4 bolsillos int. + 3 ext.</li><li>500 g</li></ul>
+            <div class="perry-price-row">
+              <span class="perry-price">$75.000</span>
+              <a class="perry-mini-btn" href="https://wa.me/573103466271?text=Hola%2C%20me%20interesa%20el%20Morral%20viajero%20de%20Perrylandia" target="_blank" rel="noopener">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div class="perry-card">
+          <div class="perry-card-photo"><img src="img/productos/pc.jpg" alt="Maleta para PC — Perrylandia"></div>
+          <div class="perry-card-body">
+            <h4>Maleta para PC</h4>
+            <ul class="perry-specs"><li>46 × 34 × 14 cm</li><li>2 bolsillos int. + 2 ext.</li><li>550 g</li></ul>
+            <div class="perry-price-row">
+              <span class="perry-price">$65.000</span>
+              <a class="perry-mini-btn" href="https://wa.me/573103466271?text=Hola%2C%20me%20interesa%20el%20Maleta%20para%20PC%20de%20Perrylandia" target="_blank" rel="noopener">Consultar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="perry-sub">
+        <h3>Brazaletes de cobre reciclado</h3>
+        <span>$50.000 c/u</span>
+      </div>
+      <div class="perry-grid">
+        <div class="perry-card">
+          <div class="perry-card-photo"><img src="img/productos/cuff-punteado.jpg" alt="Cuff martillado punteado — Perrylandia"></div>
+          <div class="perry-card-body">
+            <h4>Cuff martillado punteado</h4>
+            <ul class="perry-specs"><li>Cobre 100% reciclado</li><li>Textura martillada a mano</li><li>Talla única, ajustable</li></ul>
+            <div class="perry-price-row">
+              <span class="perry-price">$50.000</span>
+              <a class="perry-mini-btn" href="https://wa.me/573103466271?text=Hola%2C%20me%20interesa%20el%20Cuff%20martillado%20punteado%20de%20Perrylandia" target="_blank" rel="noopener">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div class="perry-card">
+          <div class="perry-card-photo"><img src="img/productos/cuff-liso.jpg" alt="Cuff liso pulido — Perrylandia"></div>
+          <div class="perry-card-body">
+            <h4>Cuff liso pulido</h4>
+            <ul class="perry-specs"><li>Cobre 100% reciclado</li><li>Acabado espejo</li><li>Talla única, ajustable</li></ul>
+            <div class="perry-price-row">
+              <span class="perry-price">$50.000</span>
+              <a class="perry-mini-btn" href="https://wa.me/573103466271?text=Hola%2C%20me%20interesa%20el%20Cuff%20liso%20pulido%20de%20Perrylandia" target="_blank" rel="noopener">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div class="perry-card">
+          <div class="perry-card-photo"><img src="img/productos/cuff-rayado.jpg" alt="Cuff martillado rayado — Perrylandia"></div>
+          <div class="perry-card-body">
+            <h4>Cuff martillado rayado</h4>
+            <ul class="perry-specs"><li>Cobre 100% reciclado</li><li>Textura lineal martillada</li><li>Talla única, ajustable</li></ul>
+            <div class="perry-price-row">
+              <span class="perry-price">$50.000</span>
+              <a class="perry-mini-btn" href="https://wa.me/573103466271?text=Hola%2C%20me%20interesa%20el%20Cuff%20martillado%20rayado%20de%20Perrylandia" target="_blank" rel="noopener">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div class="perry-card">
+          <div class="perry-card-photo"><img src="img/productos/cuff-espiral.jpg" alt="Brazalete espiral — Perrylandia"></div>
+          <div class="perry-card-body">
+            <h4>Brazalete espiral</h4>
+            <ul class="perry-specs"><li>Alambre de cobre reciclado</li><li>Puntas en espiral decorativas</li><li>Talla única, ajustable</li></ul>
+            <div class="perry-price-row">
+              <span class="perry-price">$50.000</span>
+              <a class="perry-mini-btn" href="https://wa.me/573103466271?text=Hola%2C%20me%20interesa%20el%20Brazalete%20espiral%20de%20Perrylandia" target="_blank" rel="noopener">Consultar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="perry-cta">
+        <div>
+          <h3>&iquest;Le interesa alg&uacute;n producto de Perrylandia?</h3>
+          <p>Escr&iacute;bale directamente a Hernando Navarro por WhatsApp para conocer disponibilidad, tallas y formas de pago.</p>
+        </div>
+        <a class="btn btn-primary" href="https://wa.me/573103466271" target="_blank" rel="noopener">Escribir a Hernando</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section id="nosotros">
+    <div class="wrap">
+      <div class="about-grid">
+        <div>
+          <div class="eyebrow"><div class="rule"></div><span class="mono">Quiénes somos</span></div>
+          <h2 style="margin-top:14px; font-size:clamp(1.9rem,3.4vw,2.6rem); color:var(--forest-deep);">Una empresa colombiana comprometida con el medio ambiente.</h2>
+          <p style="margin-top:24px;">Codipapel nace de la necesidad de dar respuesta a la crisis ambiental generada por la sobreexplotación de recursos naturales no renovables. Proponemos sistemas de recolección, recuperación y comercialización altamente efectivos para materiales reciclables.</p>
+          <p>Brindamos apoyo, estímulo y bienestar a quienes deciden participar en la noble actividad del reciclaje, contando con la tecnología adecuada para realizar un excelente trabajo en cada uno de nuestros procesos.</p>
+        </div>
+        <div class="about-loc">
+          <img src="https://images.unsplash.com/photo-1764529310915-f73129d29c22?fm=jpg&amp;q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Fardos de cartón y papel compactado para reciclaje">
+          <span class="mono">Ubicación</span>
+          <h3>Zona industrial de Puente Aranda</h3>
+          <address>
+            Carrera 34A #10-97<br>
+            Barrio Pensilvania, Bogotá D.C.<br>
+            Colombia
+          </address>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section-dark">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div>
+          <div class="section-head" style="margin-bottom:36px;">
+            <div class="eyebrow"><div class="rule"></div><span class="mono">Contacto</span></div>
+            <h2>Hablemos de la recolección de su material.</h2>
+          </div>
+          <ul class="contact-list">
+            <li>
+              <span class="label">Teléfonos</span>
+              <a class="value" href="tel:+573025137383">302 513 7383 · 310 346 6271</a>
+            </li>
+            <li>
+              <span class="label">Correo</span>
+              <a class="value" href="mailto:codipapel@yahoo.com.ar">codipapel@yahoo.com.ar</a>
+            </li>
+            <li>
+              <span class="label">Dirección</span>
+              <span class="value">Cra. 34A #10-97, Bogotá</span>
+            </li>
+            <li>
+              <span class="label">Horario</span>
+              <span class="value">Lun–vie 7am–5pm · Sáb 7am–1pm</span>
+            </li>
+          </ul>
+        </div>
+        <div class="cta-card">
+          <h3>¿Necesita recolección a domicilio?</h3>
+          <p>Escríbanos por WhatsApp o llámenos directamente y coordinamos la recolección de su material reciclable o archivo confidencial sin costo adicional.</p>
+          <a class="btn btn-primary" href="https://wa.me/573025137383" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="alliances">
+  <div class="wrap">
+    <span class="alliances-label">Alianzas estratégicas</span>
+    <div class="alliances-list">
+      <a class="alliance-card" href="https://iserra100.co" target="_blank" rel="noopener" title="Iserra 100">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 477.69 252.8"><defs><style>.cls-1{fill:#fbc304;}.cls-2{fill:#0075f0;}.cls-3{fill:#93c600;}.cls-4{fill:#f03;}.cls-5{fill:#f76e11;}.cls-6{fill:#383838;}</style></defs><path class="cls-1" d="M326.5,134.46l-.17.12-.05,0h.13Z"></path><path class="cls-2" d="M393.34,126.52c26.11-20.2,20.54-68,58.39-76.44-9.85-7.79-20.58-10.44-33-11.69-11.63-1.17-22.58.11-32.2,4.19.12,18.8,4.8,39-3.5,55.78-9.68,19.51-28.75,27.71-48.69,33.92l-7.47,2.41,7.83,1.1C355.38,138.91,376.11,139.85,393.34,126.52Z"></path><path class="cls-3" d="M477.69,157.93c-2.17-12.37-8.41-21.48-16.82-30.67-13.74-15-30.84-23-50.06-20.63-4,8.71-8.82,16.73-16.23,22.52-17.17,13.41-37.9,12.57-58.57,9.54l-8.17-1.1,5.49,6.46c13.33,16.07,28.18,30.57,49.91,32.08C416.17,178.43,443.82,139.05,477.69,157.93Z"></path><path class="cls-4" d="M431,218.76c-.16-18.78-6.42-35.11-19.91-46.23-10.54,4.34-21.19,7.77-32.22,6.46-21.63-2.57-35.75-17.78-48.29-34.48l-5.2-6.76h.05l.34.05-.44-.49,0,0h0l-.26,8.53c-.86,20.86.46,41.58,15.59,57.26,22.91,23.75,69.81,13,82.32,49.73C429.67,242.16,431.14,231.21,431,218.76Z"></path><path class="cls-5" d="M399.05,1c-30,24.62-3.42,64.75-17.6,94.56-9.36,19.67-28.29,28.19-48.12,34.72L325.26,133h0l0,0,5.46-10.44c8-25.2-8.23-46.15-5.3-70.55C328.17,29.15,343,13.69,364.35,5.44,376,1,386.74-1.51,399.05,1Z"></path><path class="cls-6" d="M53.29,123c3.53,0,6-.34,7.5-1a3.91,3.91,0,0,0,2.2-3.94q0-2.28-2.84-4a55.16,55.16,0,0,0-8.67-3.87,87.38,87.38,0,0,1-8.22-3.42A24,24,0,0,1,37,102.52a17.15,17.15,0,0,1-4-5.89,21.46,21.46,0,0,1-1.42-8.25,17.67,17.67,0,0,1,7.12-14.83q7.13-5.46,19.55-5.45a64.55,64.55,0,0,1,11.9,1.07,56.79,56.79,0,0,1,9.06,2.35L75.81,86.23a72.25,72.25,0,0,0-7.31-2,40.72,40.72,0,0,0-8.87-.89q-9.06,0-9.06,5a5,5,0,0,0,.39,2A4.34,4.34,0,0,0,52.51,92a22.28,22.28,0,0,0,3.17,1.78q2,1,5.11,2.11a79.06,79.06,0,0,1,10.49,4.54,25,25,0,0,1,6.54,4.83A15,15,0,0,1,81.18,111a24.89,24.89,0,0,1,1,7.33q0,9.87-7.57,14.93t-21.42,5.06a61.75,61.75,0,0,1-23.43-4.05L33,118.94a63.27,63.27,0,0,0,10.1,3A50,50,0,0,0,53.29,123Z"></path><path class="cls-6" d="M88.1,103.73a40,40,0,0,1,2.79-15.54A33.23,33.23,0,0,1,98.2,77.1a30.4,30.4,0,0,1,10.42-6.72,33.26,33.26,0,0,1,12.1-2.28q14.49,0,22.91,8.68t8.42,25.55c0,1.1-.05,2.31-.13,3.62s-.18,2.47-.26,3.48H107.91a12.5,12.5,0,0,0,5.56,9.26q4.92,3.42,13.21,3.42a56.41,56.41,0,0,0,10.42-1,39.66,39.66,0,0,0,8.34-2.34L148,134.16a26.58,26.58,0,0,1-4.14,1.52,54.84,54.84,0,0,1-5.76,1.33c-2.11.38-4.38.7-6.79,1a67.85,67.85,0,0,1-7.25.38,43.62,43.62,0,0,1-16-2.66,31.22,31.22,0,0,1-11.26-7.29,28.75,28.75,0,0,1-6.6-11A42.7,42.7,0,0,1,88.1,103.73Zm45.31-7.23a19.48,19.48,0,0,0-.84-4.69,11.41,11.41,0,0,0-6-7A12.46,12.46,0,0,0,121,83.69a13.1,13.1,0,0,0-5.56,1.08,11.55,11.55,0,0,0-3.89,2.85,12.88,12.88,0,0,0-2.39,4.12,26.87,26.87,0,0,0-1.23,4.76Z"></path><path class="cls-6" d="M202.79,86.61c-1.73-.42-3.76-.87-6.09-1.33a38,38,0,0,0-7.51-.7,35.87,35.87,0,0,0-4.33.32,26.52,26.52,0,0,0-3.82.69v51H161.75V73.42A119,119,0,0,1,174,70.06a72.24,72.24,0,0,1,15.72-1.58c1,0,2.29.06,3.76.19s2.93.29,4.4.5,2.93.47,4.4.76A21.59,21.59,0,0,1,206,71Z"></path><path class="cls-6" d="M252.23,86.61c-1.73-.42-3.75-.87-6.08-1.33a38,38,0,0,0-7.51-.7,35.88,35.88,0,0,0-4.34.32,26.79,26.79,0,0,0-3.82.69v51H211.2V73.42a119.5,119.5,0,0,1,12.23-3.36,72.27,72.27,0,0,1,15.73-1.58c1,0,2.28.06,3.75.19s2.93.29,4.4.5,2.93.47,4.4.76A21.72,21.72,0,0,1,255.47,71Z"></path><path class="cls-6" d="M283.81,68.1A45.48,45.48,0,0,1,298.05,70a22.2,22.2,0,0,1,9.13,5.45A20,20,0,0,1,312,84.07a41.73,41.73,0,0,1,1.42,11.29v39.31q-4.14.89-11.52,2.09a113.27,113.27,0,0,1-17.86,1.2,57.8,57.8,0,0,1-12-1.14,26.37,26.37,0,0,1-9.26-3.74,17.24,17.24,0,0,1-5.95-6.78A23,23,0,0,1,254.82,116a19.19,19.19,0,0,1,2.39-9.89,18.31,18.31,0,0,1,6.41-6.47,29.23,29.23,0,0,1,9.19-3.49,52.44,52.44,0,0,1,10.74-1.08,62.49,62.49,0,0,1,6.67.32,29.57,29.57,0,0,1,4.72.83V94.47a10.34,10.34,0,0,0-3-7.73q-3-2.92-10.36-2.92a66.66,66.66,0,0,0-9.71.7,42.42,42.42,0,0,0-8.28,2l-2.46-15.21c1.12-.34,2.53-.7,4.21-1.08s3.51-.72,5.5-1,4.08-.55,6.28-.76S281.57,68.1,283.81,68.1Zm1.56,55.28c1.89,0,3.71,0,5.43-.13a37,37,0,0,0,4.14-.38V108.54c-.77-.16-1.94-.33-3.49-.5a39.58,39.58,0,0,0-4.27-.26,39.13,39.13,0,0,0-5.11.32,13.58,13.58,0,0,0-4.21,1.21,7.17,7.17,0,0,0-2.85,2.4,6.65,6.65,0,0,0-1,3.81q0,4.44,3,6.15A17.1,17.1,0,0,0,285.37,123.38Z"></path><path class="cls-6" d="M0,51.45H20.19v87.87H0Z"></path><path class="cls-6" d="M271.35,161.91a23.92,23.92,0,0,1-1.54,8.94,18.28,18.28,0,0,1-4.23,6.45,17.39,17.39,0,0,1-6.39,3.91,23.47,23.47,0,0,1-7.95,1.31,23,23,0,0,1-7.82-1.31,17.73,17.73,0,0,1-10.72-10.36,23.51,23.51,0,0,1-1.58-8.94,22.74,22.74,0,0,1,1.64-8.94,18.83,18.83,0,0,1,4.4-6.48,18,18,0,0,1,6.41-3.94,22.32,22.32,0,0,1,7.67-1.32,22.91,22.91,0,0,1,7.81,1.32,17.68,17.68,0,0,1,6.41,3.94,18.51,18.51,0,0,1,4.32,6.48A23.51,23.51,0,0,1,271.35,161.91Zm-30.84,0a17.49,17.49,0,0,0,.73,5.25,11.7,11.7,0,0,0,2.1,4,9.28,9.28,0,0,0,3.35,2.6,11.76,11.76,0,0,0,9.07,0,9.3,9.3,0,0,0,3.38-2.6,12.05,12.05,0,0,0,2.1-4,17.82,17.82,0,0,0,.72-5.25,18.15,18.15,0,0,0-.72-5.29,12,12,0,0,0-2.1-4.05,9.3,9.3,0,0,0-3.38-2.6,10.83,10.83,0,0,0-4.52-.91,10.45,10.45,0,0,0-4.55.94,9.47,9.47,0,0,0-3.35,2.63,11.62,11.62,0,0,0-2.1,4.05A17.58,17.58,0,0,0,240.51,161.91Z"></path><path class="cls-6" d="M251.24,184.08a24.75,24.75,0,0,1-8.34-1.4,19.33,19.33,0,0,1-11.65-11.25,25.15,25.15,0,0,1-1.69-9.52,24.32,24.32,0,0,1,1.76-9.55,20.81,20.81,0,0,1,4.76-7,19.81,19.81,0,0,1,7-4.27,24,24,0,0,1,8.2-1.41,24.45,24.45,0,0,1,8.33,1.41,19.3,19.3,0,0,1,7,4.28,20.25,20.25,0,0,1,4.68,7,25.2,25.2,0,0,1,1.69,9.53,25.5,25.5,0,0,1-1.66,9.51,19.83,19.83,0,0,1-4.59,7,19,19,0,0,1-6.94,4.26A25.36,25.36,0,0,1,251.24,184.08Zm0-41.29A21,21,0,0,0,244.1,144a16.68,16.68,0,0,0-5.87,3.61,17.54,17.54,0,0,0-4,6,21.32,21.32,0,0,0-1.51,8.33,22,22,0,0,0,1.46,8.34,16.12,16.12,0,0,0,9.81,9.49,21.62,21.62,0,0,0,7.29,1.23,22.23,22.23,0,0,0,7.43-1.23,15.84,15.84,0,0,0,5.82-3.56,16.82,16.82,0,0,0,3.87-5.92,22.46,22.46,0,0,0,1.43-8.35,22,22,0,0,0-1.46-8.35,17,17,0,0,0-3.95-5.95,16.41,16.41,0,0,0-5.86-3.6A21.56,21.56,0,0,0,251.24,142.79Zm0,33.47a12.35,12.35,0,0,1-5.2-1.06,10.65,10.65,0,0,1-3.91-3,13.32,13.32,0,0,1-2.38-4.55,20.71,20.71,0,0,1,0-11.4,13.47,13.47,0,0,1,2.38-4.58,11.08,11.08,0,0,1,3.89-3,12,12,0,0,1,5.22-1.09,12.39,12.39,0,0,1,5.16,1.05,10.92,10.92,0,0,1,4,3,13.83,13.83,0,0,1,2.38,4.58,19.64,19.64,0,0,1,.79,5.75,18.9,18.9,0,0,1-.8,5.71,13.48,13.48,0,0,1-2.37,4.55,10.92,10.92,0,0,1-4,3A12.39,12.39,0,0,1,251.24,176.26Zm0-25.64a8.9,8.9,0,0,0-3.88.79,7.87,7.87,0,0,0-2.81,2.2,10.17,10.17,0,0,0-1.82,3.53,17.64,17.64,0,0,0,0,9.56,10.2,10.2,0,0,0,1.82,3.5,7.51,7.51,0,0,0,2.79,2.17,10.19,10.19,0,0,0,7.77,0,7.64,7.64,0,0,0,2.82-2.17,10.56,10.56,0,0,0,1.82-3.5,18,18,0,0,0,0-9.62,10.33,10.33,0,0,0-1.81-3.53,7.61,7.61,0,0,0-2.82-2.16A9.35,9.35,0,0,0,251.24,150.62Z"></path><path class="cls-6" d="M313.45,161.91a23.92,23.92,0,0,1-1.54,8.94,18.28,18.28,0,0,1-4.23,6.45,17.35,17.35,0,0,1-6.38,3.91,23.53,23.53,0,0,1-8,1.31,22.91,22.91,0,0,1-7.81-1.31,18,18,0,0,1-6.42-3.91,18.32,18.32,0,0,1-4.31-6.45,23.51,23.51,0,0,1-1.57-8.94,22.75,22.75,0,0,1,1.63-8.94,19,19,0,0,1,4.4-6.48,18.11,18.11,0,0,1,6.41-3.94,22.36,22.36,0,0,1,7.67-1.32,22.91,22.91,0,0,1,7.81,1.32,17.81,17.81,0,0,1,6.42,3.94,18.63,18.63,0,0,1,4.31,6.48A23.51,23.51,0,0,1,313.45,161.91Zm-30.84,0a17.49,17.49,0,0,0,.73,5.25,12.05,12.05,0,0,0,2.1,4,9.28,9.28,0,0,0,3.35,2.6,11.76,11.76,0,0,0,9.07,0,9.22,9.22,0,0,0,3.38-2.6,12.05,12.05,0,0,0,2.1-4,17.81,17.81,0,0,0,.73-5.25,18.14,18.14,0,0,0-.73-5.29,12,12,0,0,0-2.1-4.05,9.22,9.22,0,0,0-3.38-2.6,10.8,10.8,0,0,0-4.52-.91,10.45,10.45,0,0,0-4.55.94,9.47,9.47,0,0,0-3.35,2.63,12,12,0,0,0-2.1,4.05A17.58,17.58,0,0,0,282.61,161.91Z"></path><path class="cls-6" d="M293.34,184.08a24.75,24.75,0,0,1-8.34-1.4,19.28,19.28,0,0,1-11.64-11.25,25,25,0,0,1-1.69-9.52,24.5,24.5,0,0,1,1.75-9.55,20.79,20.79,0,0,1,4.77-7,19.68,19.68,0,0,1,6.95-4.27,24,24,0,0,1,8.2-1.41,24.51,24.51,0,0,1,8.34,1.41,19.34,19.34,0,0,1,7,4.28,20.11,20.11,0,0,1,4.68,7,25.2,25.2,0,0,1,1.69,9.53,25.51,25.51,0,0,1-1.65,9.51,20,20,0,0,1-4.59,7,19.08,19.08,0,0,1-6.95,4.26A25.36,25.36,0,0,1,293.34,184.08Zm0-41.29A21,21,0,0,0,286.2,144a16.68,16.68,0,0,0-5.87,3.61,17.54,17.54,0,0,0-4,6,21.32,21.32,0,0,0-1.5,8.33,22.2,22.2,0,0,0,1.45,8.34,16.19,16.19,0,0,0,9.81,9.49,21.62,21.62,0,0,0,7.29,1.23,22.29,22.29,0,0,0,7.44-1.23,15.87,15.87,0,0,0,5.82-3.56,16.8,16.8,0,0,0,3.86-5.92,24.93,24.93,0,0,0,0-16.7,17.16,17.16,0,0,0-3.95-5.95,16.5,16.5,0,0,0-5.86-3.6A21.62,21.62,0,0,0,293.34,142.79Zm0,33.47a12.35,12.35,0,0,1-5.2-1.06,10.74,10.74,0,0,1-3.91-3,13.32,13.32,0,0,1-2.38-4.55,20.71,20.71,0,0,1,0-11.4,13.47,13.47,0,0,1,2.38-4.58,11.26,11.26,0,0,1,3.89-3,12,12,0,0,1,5.22-1.09,12.36,12.36,0,0,1,5.16,1.05,10.84,10.84,0,0,1,3.95,3,13.65,13.65,0,0,1,2.38,4.58,19.63,19.63,0,0,1,.8,5.75,19.22,19.22,0,0,1-.8,5.71,13.68,13.68,0,0,1-2.38,4.55,10.76,10.76,0,0,1-3.95,3A12.36,12.36,0,0,1,293.34,176.26Zm0-25.64a8.93,8.93,0,0,0-3.88.79,8,8,0,0,0-2.81,2.2,10.52,10.52,0,0,0-1.82,3.53,17.64,17.64,0,0,0,0,9.56,10.38,10.38,0,0,0,1.82,3.5,7.59,7.59,0,0,0,2.79,2.17,10.19,10.19,0,0,0,7.77,0A7.64,7.64,0,0,0,300,170.2a10.56,10.56,0,0,0,1.82-3.5,16.13,16.13,0,0,0,.66-4.79,16.45,16.45,0,0,0-.66-4.83,10.52,10.52,0,0,0-1.82-3.53,7.61,7.61,0,0,0-2.82-2.16A9.35,9.35,0,0,0,293.34,150.62Z"></path><path class="cls-6" d="M205.39,152.24q2-.83,4.2-1.87t4.28-2.32q2.08-1.26,4-2.66a27.06,27.06,0,0,0,3.44-3h7.23v39H218.18V155.65a32.34,32.34,0,0,1-4.66,2.48q-2.57,1.13-5,1.94Z"></path><path class="cls-6" d="M230.1,183H216.62V158.37c-.79.42-1.61.81-2.47,1.19-1.75.76-3.48,1.43-5.14,2l-1.4.47-4.25-10.64,1.44-.59c1.32-.53,2.71-1.15,4.12-1.83s2.81-1.44,4.14-2.24,2.65-1.68,3.89-2.59a24.76,24.76,0,0,0,3.24-2.79l.46-.47h9.45Zm-10.36-3.12H227V144h-5a28.63,28.63,0,0,1-3.16,2.66c-1.31,1-2.69,1.88-4.11,2.74s-2.91,1.66-4.41,2.38c-1,.47-1.93.91-2.87,1.31l2,5c1.14-.42,2.31-.89,3.49-1.41a30.67,30.67,0,0,0,4.43-2.36l2.41-1.58Z"></path><path d="M77.57,60.52a11.3,11.3,0,0,1-4.2-.75,9,9,0,0,1-3.25-2.21A10.12,10.12,0,0,1,68,54a14.94,14.94,0,0,1-.74-4.88,13.19,13.19,0,0,1,.84-4.87,10.61,10.61,0,0,1,2.25-3.58,9.52,9.52,0,0,1,3.32-2.21,10.67,10.67,0,0,1,4-.76,13.9,13.9,0,0,1,2.44.19,14.83,14.83,0,0,1,1.89.44,8.57,8.57,0,0,1,1.31.51,7.29,7.29,0,0,1,.7.37l-.89,2.53a4.4,4.4,0,0,0-.82-.41,12.65,12.65,0,0,0-1.21-.44,11.42,11.42,0,0,0-1.48-.37A9.87,9.87,0,0,0,78,40.36a7.75,7.75,0,0,0-3.12.6,6.41,6.41,0,0,0-2.37,1.74,7.79,7.79,0,0,0-1.5,2.76,12.12,12.12,0,0,0-.52,3.64A12.86,12.86,0,0,0,71,52.67a7.77,7.77,0,0,0,1.37,2.76,6.1,6.1,0,0,0,2.29,1.78,7.58,7.58,0,0,0,3.2.63,11.85,11.85,0,0,0,3.5-.44,15.28,15.28,0,0,0,2.09-.79l.79,2.53a5.19,5.19,0,0,1-.79.39A10.84,10.84,0,0,1,82,60c-.57.14-1.23.27-2,.38A18.9,18.9,0,0,1,77.57,60.52Z"></path><path d="M86.15,51.88a10.47,10.47,0,0,1,.63-3.8,7.89,7.89,0,0,1,1.67-2.7,6.86,6.86,0,0,1,2.4-1.61,7.47,7.47,0,0,1,2.78-.54,6.31,6.31,0,0,1,5.08,2.07q1.77,2.07,1.77,6.29v.49a4.75,4.75,0,0,1,0,.56H89.21a6.06,6.06,0,0,0,1.48,3.88,5.46,5.46,0,0,0,4,1.32,10.79,10.79,0,0,0,2.61-.27,9.51,9.51,0,0,0,1.59-.52l.41,2.46a8.62,8.62,0,0,1-1.88.6,13.32,13.32,0,0,1-3,.32,9.69,9.69,0,0,1-3.71-.65A6.84,6.84,0,0,1,88.14,58a7.28,7.28,0,0,1-1.5-2.7A11.26,11.26,0,0,1,86.15,51.88Zm11.26-1.61a4.91,4.91,0,0,0-1-3.27,3.41,3.41,0,0,0-2.82-1.27,3.93,3.93,0,0,0-1.79.39,4,4,0,0,0-1.3,1,4.63,4.63,0,0,0-.84,1.45,7.39,7.39,0,0,0-.4,1.67Z"></path><path d="M104.7,44.12c.68-.17,1.57-.35,2.69-.54a23,23,0,0,1,3.84-.28,8.25,8.25,0,0,1,3.25.55,5,5,0,0,1,2.07,1.54,6,6,0,0,1,1.09,2.39,13.76,13.76,0,0,1,.32,3.06v9.21H115V51.47a14.74,14.74,0,0,0-.2-2.59,4.5,4.5,0,0,0-.68-1.73,2.69,2.69,0,0,0-1.26-1,5.57,5.57,0,0,0-2-.3l-1,0L109,46l-.82.11-.52.1V60.05H104.7Z"></path><path d="M125.56,43.64h6.21V46.1h-6.21v7.58a8.79,8.79,0,0,0,.19,2,2.84,2.84,0,0,0,.57,1.26,2,2,0,0,0,.94.65,4.1,4.1,0,0,0,1.33.19,6.26,6.26,0,0,0,2.13-.3l1.12-.43.57,2.43a10.41,10.41,0,0,1-1.55.56,8.84,8.84,0,0,1-2.52.33,7.56,7.56,0,0,1-2.77-.43,4.06,4.06,0,0,1-1.75-1.28,5.08,5.08,0,0,1-.93-2.09,13.86,13.86,0,0,1-.27-2.89V39.07l2.94-.51Z"></path><path d="M141.56,43.3c.25,0,.54,0,.86,0s.65.08,1,.13l.86.16a5.27,5.27,0,0,1,.59.14l-.51,2.56a7.71,7.71,0,0,0-1.15-.3,9.74,9.74,0,0,0-2.07-.18,7.45,7.45,0,0,0-1.62.18l-1.06.23V60.05H135.5V44.34a18.41,18.41,0,0,1,2.58-.71A16.79,16.79,0,0,1,141.56,43.3Z"></path><path d="M162.16,51.85a10.33,10.33,0,0,1-.57,3.53A8.09,8.09,0,0,1,160,58.09a7,7,0,0,1-2.45,1.76,8.13,8.13,0,0,1-6.18,0,7,7,0,0,1-2.45-1.76,8.09,8.09,0,0,1-1.59-2.71,11.18,11.18,0,0,1,0-7.05,8.18,8.18,0,0,1,1.59-2.73,7,7,0,0,1,2.45-1.75,8,8,0,0,1,6.18,0A7,7,0,0,1,160,45.6a8.18,8.18,0,0,1,1.59,2.73A10.36,10.36,0,0,1,162.16,51.85Zm-3.06,0a7.11,7.11,0,0,0-1.25-4.41,4.36,4.36,0,0,0-6.78,0,7.11,7.11,0,0,0-1.25,4.41,7.06,7.06,0,0,0,1.25,4.4,4.36,4.36,0,0,0,6.78,0A7.06,7.06,0,0,0,159.1,51.85Z"></path><path d="M183.17,60.52a11.28,11.28,0,0,1-4.19-.75,8.86,8.86,0,0,1-3.25-2.21,9.83,9.83,0,0,1-2.1-3.58,14.68,14.68,0,0,1-.74-4.88,13.4,13.4,0,0,1,.83-4.87A10.48,10.48,0,0,1,176,40.65a9.48,9.48,0,0,1,3.31-2.21,10.67,10.67,0,0,1,4-.76,14.09,14.09,0,0,1,2.45.19,15.69,15.69,0,0,1,1.89.44,9,9,0,0,1,1.31.51,6.79,6.79,0,0,1,.69.37l-.88,2.53a4.75,4.75,0,0,0-.82-.41,12.91,12.91,0,0,0-1.22-.44,11,11,0,0,0-1.48-.37,9.85,9.85,0,0,0-1.62-.14,7.83,7.83,0,0,0-3.13.6,6.45,6.45,0,0,0-2.36,1.74,7.49,7.49,0,0,0-1.5,2.76,11.81,11.81,0,0,0-.52,3.64,13.26,13.26,0,0,0,.45,3.57A8,8,0,0,0,178,55.43a6.14,6.14,0,0,0,2.28,1.78,7.66,7.66,0,0,0,3.21.63,11.89,11.89,0,0,0,3.5-.44,15.05,15.05,0,0,0,2.08-.79l.79,2.53a5.19,5.19,0,0,1-.79.39,10.84,10.84,0,0,1-1.42.46c-.57.14-1.23.27-2,.38A18.68,18.68,0,0,1,183.17,60.52Z"></path><path d="M207.15,51.85a10.33,10.33,0,0,1-.57,3.53A7.92,7.92,0,0,1,205,58.09a7,7,0,0,1-2.44,1.76,8.16,8.16,0,0,1-6.19,0,7,7,0,0,1-2.44-1.76,7.94,7.94,0,0,1-1.6-2.71,11.37,11.37,0,0,1,0-7.05,8,8,0,0,1,1.6-2.73,7,7,0,0,1,2.44-1.75,8,8,0,0,1,6.19,0A7,7,0,0,1,205,45.6a8,8,0,0,1,1.59,2.73A10.36,10.36,0,0,1,207.15,51.85Zm-3.06,0a7.11,7.11,0,0,0-1.24-4.41,4.37,4.37,0,0,0-6.79,0,7.11,7.11,0,0,0-1.24,4.41,7.05,7.05,0,0,0,1.24,4.4,4.37,4.37,0,0,0,6.79,0A7.05,7.05,0,0,0,204.09,51.85Z"></path><path d="M211.29,44.12c.67-.17,1.56-.35,2.66-.54a22.93,22.93,0,0,1,3.84-.28,7.33,7.33,0,0,1,2.65.42A4.67,4.67,0,0,1,222.23,45c.15-.11.38-.25.7-.44A7.15,7.15,0,0,1,224.1,44a14.2,14.2,0,0,1,1.54-.47,7.66,7.66,0,0,1,1.83-.2,7.4,7.4,0,0,1,3.09.55,4.46,4.46,0,0,1,1.88,1.56,6.11,6.11,0,0,1,.92,2.4,18.86,18.86,0,0,1,.23,3v9.21h-2.93V51.47a19.52,19.52,0,0,0-.14-2.49,5,5,0,0,0-.54-1.74,2.53,2.53,0,0,0-1.07-1,4,4,0,0,0-1.75-.33,6.37,6.37,0,0,0-2.45.4,4.74,4.74,0,0,0-1.31.71,10,10,0,0,1,.38,1.8,16.7,16.7,0,0,1,.13,2.05v9.21H221V51.47a16.16,16.16,0,0,0-.16-2.49,4.75,4.75,0,0,0-.55-1.74,2.53,2.53,0,0,0-1.07-1,3.94,3.94,0,0,0-1.72-.33l-.95,0-1,.08-.84.11-.5.1V60.05h-2.93Z"></path><path d="M237.54,51.88a10.47,10.47,0,0,1,.63-3.8,7.89,7.89,0,0,1,1.67-2.7,6.68,6.68,0,0,1,2.4-1.61,7.43,7.43,0,0,1,2.78-.54,6.33,6.33,0,0,1,5.08,2.07q1.76,2.07,1.76,6.29v.49a4.86,4.86,0,0,1,0,.56H240.6a6,6,0,0,0,1.48,3.88,5.44,5.44,0,0,0,4,1.32,10.64,10.64,0,0,0,2.6-.27,9.37,9.37,0,0,0,1.6-.52l.41,2.46a8.82,8.82,0,0,1-1.88.6,13.41,13.41,0,0,1-3,.32,9.64,9.64,0,0,1-3.7-.65A6.84,6.84,0,0,1,239.53,58a7.14,7.14,0,0,1-1.5-2.7A11.26,11.26,0,0,1,237.54,51.88Zm11.26-1.61a5,5,0,0,0-1-3.27A3.44,3.44,0,0,0,245,45.73a3.92,3.92,0,0,0-1.78.39,4.13,4.13,0,0,0-1.31,1,4.43,4.43,0,0,0-.83,1.45,6.89,6.89,0,0,0-.4,1.67Z"></path><path d="M262.15,43.3c.25,0,.54,0,.87,0s.64.08,1,.13l.87.16a5.56,5.56,0,0,1,.58.14l-.51,2.56a7.71,7.71,0,0,0-1.15-.3,9.64,9.64,0,0,0-2.06-.18,7.47,7.47,0,0,0-1.63.18l-1.06.23V60.05h-2.93V44.34a18.59,18.59,0,0,1,2.59-.71A16.63,16.63,0,0,1,262.15,43.3Z"></path><path d="M275.4,60.43a9,9,0,0,1-3.49-.63A6.92,6.92,0,0,1,269.39,58a7.2,7.2,0,0,1-1.53-2.7,11.06,11.06,0,0,1-.51-3.45,10.39,10.39,0,0,1,.56-3.47,8,8,0,0,1,1.56-2.73,7,7,0,0,1,2.47-1.8,8.05,8.05,0,0,1,3.27-.65,13.74,13.74,0,0,1,2.21.19,10.65,10.65,0,0,1,2.11.6l-.66,2.49a7.23,7.23,0,0,0-1.53-.5,8.4,8.4,0,0,0-1.85-.19,4.68,4.68,0,0,0-3.77,1.55,6.82,6.82,0,0,0-1.31,4.51,9.3,9.3,0,0,0,.3,2.43,5,5,0,0,0,1,1.89,4.21,4.21,0,0,0,1.66,1.22,6.38,6.38,0,0,0,2.46.42,9.12,9.12,0,0,0,2.11-.22,7.64,7.64,0,0,0,1.48-.47l.42,2.46a3.85,3.85,0,0,1-.73.3,10.66,10.66,0,0,1-1.07.25c-.4.07-.83.14-1.28.19A12,12,0,0,1,275.4,60.43Z"></path><path d="M284.39,40.68a1.92,1.92,0,0,1-1.34-.52,1.85,1.85,0,0,1-.55-1.41,1.82,1.82,0,0,1,.55-1.4,1.88,1.88,0,0,1,1.34-.52,2,2,0,0,1,1.34,3.33A1.89,1.89,0,0,1,284.39,40.68Zm1.49,19.37h-2.94V43.64h2.94Z"></path><path d="M296.22,43.23a8.66,8.66,0,0,1,3,.46,5,5,0,0,1,2,1.29,4.84,4.84,0,0,1,1.06,2,9.66,9.66,0,0,1,.31,2.54V59.77l-1,.17-1.53.21c-.57.06-1.19.12-1.85.17s-1.32.08-2,.08a10.78,10.78,0,0,1-2.56-.29,5.74,5.74,0,0,1-2-.9,4.13,4.13,0,0,1-1.32-1.62,5.6,5.6,0,0,1-.47-2.43,4.71,4.71,0,0,1,.55-2.34,4.26,4.26,0,0,1,1.5-1.57,6.91,6.91,0,0,1,2.2-.89,12.12,12.12,0,0,1,2.66-.28c.29,0,.6,0,.91.05s.62.07.9.12l.74.15.44.09v-.82a6.42,6.42,0,0,0-.16-1.44,3.27,3.27,0,0,0-.56-1.26,2.92,2.92,0,0,0-1.12-.88,4.44,4.44,0,0,0-1.85-.33,14.54,14.54,0,0,0-2.54.2,8.75,8.75,0,0,0-1.62.43L291.46,44a9.11,9.11,0,0,1,1.89-.49A16.17,16.17,0,0,1,296.22,43.23Zm.26,14.71c.69,0,1.31,0,1.84,0a8.35,8.35,0,0,0,1.34-.17v-4.9a3.86,3.86,0,0,0-1-.26,10.72,10.72,0,0,0-1.72-.11,11.87,11.87,0,0,0-1.41.09,4.24,4.24,0,0,0-1.35.4,2.86,2.86,0,0,0-1,.82,2.15,2.15,0,0,0-.41,1.37,2.36,2.36,0,0,0,1,2.19A5.26,5.26,0,0,0,296.48,57.94Z"></path><path d="M312.31,60.37a5.68,5.68,0,0,1-3.84-1.17,4.6,4.6,0,0,1-1.14-3.44V36.07l2.93-.5V55.29a4.84,4.84,0,0,0,.13,1.19,1.59,1.59,0,0,0,.41.76,1.81,1.81,0,0,0,.76.43,7.9,7.9,0,0,0,1.16.23Z"></path></svg>
+      </a>
+      <a class="alliance-card" href="https://plazadepaloquemao.com" target="_blank" rel="noopener" title="Plaza de Paloquemao">
+        <img src="https://plazadepaloquemao.com/wp-content/themes/paloquemao/images/paloquemao_logo.png" alt="Plaza de Paloquemao">
+      </a>
+      <a class="alliance-card text-mark" href="https://www.arturocalle.com" target="_blank" rel="noopener" title="Arturo Calle">
+        Arturo Calle
+      </a>
+      <a class="alliance-card" href="https://transarchivos.com" target="_blank" rel="noopener" title="Transarchivos">
+        <img src="https://transarchivos.com/wp-content/uploads/2025/04/cropped-logo-TA-600x185.png" alt="Transarchivos">
+      </a>
+      <a class="alliance-card" href="https://www.salsamentariaelbohemio.com.co" target="_blank" rel="noopener" title="Salsamentaria El Bohemio">
+        <img src="https://www.salsamentariaelbohemio.com.co/wp-content/uploads/2023/01/Logo-Salsamentaria_El_Bohemio.svg" alt="Salsamentaria El Bohemio">
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span class="mono">© 2026 Codipapel — Bogotá, Colombia</span>
+    <span class="mono">Reciclaje · Destrucción confidencial · Consultoría ambiental</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var burger = document.getElementById('burgerBtn');
+  var nav = document.getElementById('mobileNav');
+  var header = document.querySelector('header');
+  function closeNav(){
+    nav.classList.remove('open');
+    burger.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }
+  function openNav(){
+    nav.classList.add('open');
+    burger.classList.add('open');
+    burger.setAttribute('aria-expanded','true');
+    document.body.style.overflow='hidden';
+    header.classList.remove('header-hidden');
+  }
+  burger.addEventListener('click', function(){
+    if(nav.classList.contains('open')){ closeNav(); } else { openNav(); }
+  });
+  Array.prototype.forEach.call(nav.querySelectorAll('a'), function(a){
+    a.addEventListener('click', closeNav);
+  });
+
+  // Auto-hide header on scroll down, reveal on scroll up
+  var lastScroll = window.scrollY;
+  window.addEventListener('scroll', function(){
+    if(nav.classList.contains('open')) return;
+    var current = window.scrollY;
+    if(current > lastScroll && current > 80){
+      header.classList.add('header-hidden');
+    } else {
+      header.classList.remove('header-hidden');
+    }
+    lastScroll = current;
+  }, {passive:true});
+})();
+</script>
+</body>
+</html>

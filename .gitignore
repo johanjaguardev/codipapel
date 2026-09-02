@@ -1,0 +1,6 @@
+# Internal working notes and tooling — not needed to render the page.
+# Kept on disk locally for Claude Code, but not tracked in this public repo.
+CLAUDE.md
+docs/
+.claude/
+perrylandia.png
