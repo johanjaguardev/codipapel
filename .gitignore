@@ -4,3 +4,5 @@ CLAUDE.md
 docs/
 .claude/
 perrylandia.png
+node_modules/
+dist/

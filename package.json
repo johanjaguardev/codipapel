@@ -1,0 +1,12 @@
+{
+  "name": "codipapel-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Build de optimización automática de imágenes para codipapel.com",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
+}
